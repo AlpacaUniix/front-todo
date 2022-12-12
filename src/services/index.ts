@@ -1,4 +1,4 @@
-import { env } from "config";
+import { DB_URL } from "config";
 
 const jsonHeaders = {
     'Content-Type' : 'application/json'

@@ -1,8 +1,7 @@
 import { createBrowserHistory } from 'history'
-import { env } from 'config'
-
+import { DB_URL } from 'config'
 export const history = createBrowserHistory({
-  basename: env.PUBLIC_URL,
+  basename: DB_URL,
 })
 
 history.listen(() => {

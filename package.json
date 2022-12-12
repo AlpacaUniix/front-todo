@@ -4,9 +4,9 @@
   "version": "1.4.2",
   "private": true,
   "scripts": {
-    "start" :"react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test" 
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +54,7 @@
     "autoprefixer": "^9",
     "axios": "^0.21.1",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.2",
     "classnames": "^2.3.1",
     "cntl": "^1.0.0",
     "daisyui": "^2.13.6",
@@ -75,12 +76,12 @@
     "prettier": "^2.3.0",
     "qrcode.react": "^3.1.0",
     "react": "^18.2.0",
-    "react-bootstrap": "^1.6.0",
     "react-datepicker": "^4.8.0",
     "react-div-100vh": "^0.6.0",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.22.1",
     "react-i18next": "^11.11.4",
+    "react-icons": "^4.7.1",
     "react-image-crop": "^10.0.0",
     "react-input-mask": "^2.0.4",
     "react-json-view": "^1.21.3",
