@@ -1,7 +1,9 @@
 import React from "react";
 
-
 export default function TableTodo() {
+
+  
+
     return(
 
         <div className="container-fluid">
@@ -19,6 +21,10 @@ export default function TableTodo() {
                 </thead>
                 <tbody>
                     <tr>
+                        <td></td>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                     </tr>
                 </tbody>

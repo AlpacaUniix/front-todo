@@ -3,7 +3,7 @@ import * as Sentry from '@sentry/react'
 import { Router, Switch, Route } from 'react-router-dom'
 import { history } from 'utils/history';
 import { Loading } from './components/base/Loading';
-import AddTasks from 'components/base/AddTasks';
+import AddTasks from 'components/base/InputTask';
 import TableTodo from './components/base/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
