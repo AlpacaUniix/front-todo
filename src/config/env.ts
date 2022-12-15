@@ -1,1 +1,1 @@
-export const DB_URL = `http://localhost:4000/task`
+export const DB_URL = `http://localhost:4000`
