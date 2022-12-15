@@ -14,7 +14,7 @@ const handleStatus = async (res: Response) => {
   }
 
 export const getTasks = () => 
-   fetch(`${DB_URL}`, {
+   fetch(`${DB_URL}/task`, {
     method: 'GET',
     headers
     }).then(handleStatus)
