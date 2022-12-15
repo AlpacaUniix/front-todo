@@ -1,5 +1,5 @@
 import { DB_URL } from "config";
-import { newTasks } from "types";
+import { newTasks } from "../types/interface";
 
 const headers = {
     'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ export const getTasks = () =>
     }).then(handleStatus)
 
 export const postTasks = (body: newTasks) =>
-  fetch(`${DB_URL}`, {
+  fetch(`${DB_URL}/task`, {
     method: 'POST',
     headers,
     body: JSON.stringify(body),
