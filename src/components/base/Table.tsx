@@ -2,34 +2,57 @@ import React from "react";
 
 export default function TableTodo() {
 
+    // const addTable = async 
   
 
     return(
 
-        <div className="container-fluid">
-            <div className="row">
-            
-            <table className="table" style={{backgroundColor:"#90A17D",color:"#FFE1E1"}}>
-                <thead>
-                    <tr>
-                        <th scope="col">Checklist</th>
-                        <th scope="col">Tasks</th>
-                        <th scope="col">Due date</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
-                        </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td ></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+        <table className="w-full border-collapse border mt-3 border-slate-500 bg-pink-100 ">
+  <thead>
+    <tr>
+      <th className="border-2 p-2 border-pink-800 ">Checklist</th>
+      <th className="border-2 p-2 border-pink-800">Task</th>
+      <th className="border-2 p-2 border-pink-800">Due date</th>
+      <th className="border-2 p-2 border-pink-800">Edit</th>
+      <th className="border-2 p-2 border-pink-800">Delete</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody className="w-full">
+    <tr>
+      <td className="border-2 p-2 border-pink-800 ...">
+        <div className="flex justify-center">
+        <input type="checkbox" className="required:border-red-500" />
         </div>
+      </td>
+      <td className="border-2 p-2 border-pink-800 ..."></td>
+      <td className="border-2 p-2 border-pink-800 ..."></td>
+      <td className="border-2 p-2 border-pink-800 ...">
+        <div className="flex justify-center">
+        <button
+        className="">
+        <i className="bi bi-pencil-square"></i>
+        </button>
         </div>
+        
+      </td>
+      <td className="border-2 p-2 border-pink-800 ...">
+        <div className="flex justify-center">
+        <button
+        className="">
+        <i className="bi bi-trash"></i>
+        </button>
+        </div>
+        
+      </td>
+
+      
+
+
+    </tr>
+  </tbody>
+</table>
 
     )}

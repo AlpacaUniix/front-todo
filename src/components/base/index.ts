@@ -1,3 +1,3 @@
 export * from './Loading'
 export * from './Table'
-export * from './InputTask'
+export * from './newTask'
