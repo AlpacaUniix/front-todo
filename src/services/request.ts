@@ -1,4 +1,5 @@
 import { DB_URL } from "config";
+import { newTasks } from "types";
 
 const headers = {
     'Content-Type': 'application/json',
@@ -12,11 +13,32 @@ const handleStatus = async (res: Response) => {
     throw new Error(JSON.stringify(resJson))
   }
 
-export const getTasks = async () => 
-  fetch(DB_URL, {
+export const getTasks = () => 
+   fetch(`${DB_URL}`, {
     method: 'GET',
-    headers,
+    headers
     }).then(handleStatus)
+
+export const postTasks = (body: newTasks) =>
+  fetch(`${DB_URL}`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(body),
+  }).then(handleStatus)
+
+  export const deleteTasks = () =>
+    fetch(`${DB_URL}`, { 
+      method: 'DELETE',
+      headers,
+    }).then(handleStatus)
+
+  export const updateTasks = (body: newTasks) =>
+    fetch(`${DB_URL}`, {
+      method: 'PUT',
+      headers,
+      body: JSON.stringify(body),
+    })
+      
 
 
 
