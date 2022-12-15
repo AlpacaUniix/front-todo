@@ -1,12 +1,8 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { postTasks } from 'services'
-import TableTodo from './Table'
+import { postTasks } from '../../services/request'
+// import TableTodo from './Table'
 
-interface taskProps {
-  task?: string
-  date?: string | number
-}
 
 export default function AddTask() {
   const {
@@ -17,7 +13,6 @@ export default function AddTask() {
 
   const addData = async (data) => {
     console.log(data)
-
     try {
       if (data !== undefined) {
         await postTasks(data)
@@ -28,49 +23,46 @@ export default function AddTask() {
   }
 
   return (
-    <div className="bg-blue-200 w-full font-mono flex justify-center">
-      <div className='w-4/5'>
+    <div className="bg-pink-300 w-full font-mono flex justify-center">
+      <div className="w-4/5">
         <form onSubmit={handleSubmit(addData)}>
-          <h2 className="pt-5 text-center text-3xl text-blue-800">
+          <h2 className="pt-5 text-center text-3xl text-purple-300">
             To Do List
           </h2>
-          <span className="block mx-2 text-sm font-medium text-slate-700">
+          <span className="block mx-2 text-sm font-medium text-purple-300">
             Task name
           </span>
           <input
-            {...register('task')}
             type="text"
             placeholder="Add tasks..."
-            name="addyourtask"
-            className=" mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300
-             placeholder-slate-400 focus:outline-none focus:border-sky-500
-              focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+            className=" mt-1 px-3 py-2 bg-white border shadow-sm text-blue-200
+             border-blue-100 placeholder-blue-100 focus:outline-none focus:border-blue-200
+              focus:ring-blue-200 block w-full rounded-md sm:text-sm focus:ring-1"
+              {...register('task', { required: true, maxLength: 80 })}
           />
-          <span className="block mx-2 mt-3 text-sm font-medium text-slate-700">
+          <span className="block mx-2 mt-3 text-sm font-medium text-purple-300">
             Date
           </span>
           <input
-            {...register('task')}
+            
             type="text"
             placeholder="yy-mm-dd (2021-10-01)"
-            name="addyourtask"
-            className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300
-             placeholder-slate-400 focus:outline-none focus:border-sky-500
-              focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+            className="mt-1 px-3 py-2 bg-white border shadow-sm text-blue-200
+             border-blue-100 placeholder-blue-100 focus:outline-none focus:border-blue-200
+              focus:ring-blue-200 block w-full rounded-md sm:text-sm focus:ring-1"
+              {...register('date', { required: true, maxLength: 80 })}
           />
           {errors.exampleRequired && <p>This field is required</p>}
-          <div className='flex justify-center'>
-          <button
-            className="p-2 mt-4 rounded-md  text-white
-           bg-purple-300 hover:bg-purple-400"
-            type="submit"
-          >
-            Add
-          </button>
+          <div className="flex justify-center">
+            <button
+              className="p-2 mt-4 rounded-md  text-white
+           bg-red-300 hover:bg-red-400"
+              type="submit"
+            >
+              Add
+            </button>
           </div>
-          
         </form>
-        <TableTodo />
       </div>
     </div>
   )
