@@ -11,6 +11,8 @@ export default function AddTask() {
     formState: { errors },
   } = useForm()
 
+
+
   const addData = async (data) => {
     console.log(data)
     try {
@@ -62,6 +64,7 @@ export default function AddTask() {
               Add
             </button>
           </div>
+          
         </form>
       </div>
     </div>
