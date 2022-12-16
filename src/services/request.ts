@@ -26,14 +26,14 @@ export const postTasks = (body: newTasks) =>
     body: JSON.stringify(body),
   }).then(handleStatus)
 
-  export const deleteTasks = () =>
-    fetch(`${DB_URL}`, { 
+  export const deleteTasks = (id:string) =>
+    fetch(`${DB_URL}/task/${id}`, { 
       method: 'DELETE',
       headers,
     }).then(handleStatus)
 
-  export const updateTasks = (body: newTasks) =>
-    fetch(`${DB_URL}`, {
+  export const updateTasks = (id:string,body: newTasks) =>
+    fetch(`${DB_URL}/task/${id}`, {
       method: 'PUT',
       headers,
       body: JSON.stringify(body),
