@@ -38,7 +38,10 @@ module.exports = {
           '900' : '#9d8189'
         }
         ,
-        teal: '#829460',
+        teal: {
+          '300' : '#A4BE7B',
+          '400' : '#5F8D4E'
+        },
         orange: '#f7ede2'
       },
     },
