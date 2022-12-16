@@ -34,7 +34,7 @@ export const postTasks = (body: newTasks) =>
 
   export const updateTasks = (id:string,body: newTasks) =>
     fetch(`${DB_URL}/task/${id}`, {
-      method: 'PUT',
+      method: 'PATCH',
       headers,
       body: JSON.stringify(body),
     })
