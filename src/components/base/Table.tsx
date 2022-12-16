@@ -35,17 +35,24 @@ export default function TableTodo() {
     setId(id)
   }
 
-  const updateTable = async (data) => {
+  const updateTable = async (data,isCheck) => {
     console.log(id,data)
     try {
       if (data !== undefined && id!==undefined) {
         await updateTasks(id, data)
+        setShowModal(false)
+        setIsCheck(true)
+        console.log(setIsCheck);
+        
       }
     } catch (err) {
       console.error(err)
     }
   }
 
+ 
+
+  
 
 
   return (
@@ -68,10 +75,10 @@ export default function TableTodo() {
               {/* Column Checklist */}
               <td className="border-2 p-2 border-purple-900">
                 <div className="flex justify-center">
+                  
                   <input
                     id="checked-checkbox"
                     type="checkbox"
-                    value=""
                     className="w-4 h-4 accent-pink-600"
                   />
                 </div>
