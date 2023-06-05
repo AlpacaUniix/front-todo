@@ -8,9 +8,8 @@ export default function TableTodo() {
   const [change, setChange] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [id, setId] = useState()
-  const [isCheck, setIsCheck] = useState(false);
+  const [isCheck, setIsCheck] = useState(false)
 
-  console.log(data)
   useEffect(() => {
     const addTable = async () => {
       const tasks = await getTasks()
@@ -19,8 +18,6 @@ export default function TableTodo() {
     }
     addTable()
   }, [change])
-
-  console.log(id)
 
   const deleteTable = (id) => {
     try {
@@ -35,25 +32,20 @@ export default function TableTodo() {
     setId(id)
   }
 
-  const updateTable = async (data,isCheck) => {
-    console.log(id,data)
+  const updateTable = async (data, isCheck) => {
+    console.log('id ->', id)
+    console.log('data ->', data)
+
     try {
-      if (data !== undefined && id!==undefined) {
+      if (data !== undefined && id !== undefined) {
         await updateTasks(id, data)
         setShowModal(false)
         setIsCheck(true)
-        console.log(setIsCheck);
-        
       }
     } catch (err) {
       console.error(err)
     }
   }
-
- 
-
-  
-
 
   return (
     <>
@@ -75,7 +67,6 @@ export default function TableTodo() {
               {/* Column Checklist */}
               <td className="border-2 p-2 border-purple-900">
                 <div className="flex justify-center">
-                  
                   <input
                     id="checked-checkbox"
                     type="checkbox"
