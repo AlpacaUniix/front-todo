@@ -1,9 +1,6 @@
-import React from 'react'
 import { useForm } from 'react-hook-form'
 import { postTasks } from '../../services/request'
 import TableTodo from './Table'
-
-
 
 export default function AddTask() {
   const {
@@ -41,7 +38,7 @@ export default function AddTask() {
             className=" mt-1 px-3 py-2 bg-white border shadow-sm text-blue-200
              border-blue-100 placeholder-blue-100 focus:outline-none focus:border-blue-200
               focus:ring-blue-200 block w-full rounded-md sm:text-sm focus:ring-1"
-              {...register('task', { required: true, maxLength: 80 })}
+            {...register('task', { required: true, maxLength: 80 })}
           />
           {/* input Date */}
           <span className="block mx-2 mt-3 text-sm font-medium text-purple-300">
@@ -53,7 +50,7 @@ export default function AddTask() {
             className="mt-1 px-3 py-2 bg-white border shadow-sm text-blue-200
              border-blue-100 placeholder-blue-100 focus:outline-none focus:border-blue-200
               focus:ring-blue-200 block w-full rounded-md sm:text-sm focus:ring-1"
-              {...register('date', { required: true, maxLength: 80 })}
+            {...register('date', { required: true, maxLength: 80 })}
           />
           {errors.exampleRequired && <p>This field is required</p>}
           {/* Button add task */}
