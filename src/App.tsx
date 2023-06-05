@@ -16,7 +16,7 @@ export default function App () {
    <Router history={history}>
     <Switch>
       <SentryRoute exact path="/load" component={Loading} />
-      <SentryRoute exact path="/addtask" component={AddTasks} />
+      <SentryRoute exact path="/" component={AddTasks} />
       <SentryRoute exact path="/table" component={TableTodo} />
       <SentryRoute exact path="/modal" component={Modal} />
        </Switch>
